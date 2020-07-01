@@ -12,11 +12,11 @@
 public class Main{
     public static void main(String[] args){
         int number = 0;
-        Person person;          // class 변수 person을 선언한다. 이때 아직 객체는 생성되지 않고 변수만 만들어지며 person의 값은 null 이다.
+        Person person;  // class 변수 person을 선언한다. 이때 아직 객체는 생성되지 않고 변수만 만들어지며 person의 값은 null 이다.
         person = new Person();  // new Person()에 의해 Person 객체가 만들어지고 person에 그 주소를 저장한다.
 
         person.name = "John";
-        person.number = "01015147747"; // first가 가리키고 있는 Person 타입의 객체에 있는 name과 number 라는 이름의 필드에 각각 데이터를 저장한다.
+        person.number = "01015147747"; // first가 가리키고 있는 Person 타입의 객체에 필드에 각각 데이터를 저장한다.
 
         Person[] members = new Person[10]; // Person class의 배열 선언(as like array of pointer in C)
 
