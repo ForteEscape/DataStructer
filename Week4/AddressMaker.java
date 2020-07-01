@@ -65,5 +65,7 @@ public class AddressMaker {
         temp = members[num1];
         members[num1] = members[num2]; //members 내부의 값들은 각 객체의 주소를 가지고 있으므로 이를 swap 하기만 해도 내부 값은 바뀔 것이다.
         members[num2] = temp;
+
+        // 객체의 값이 바뀌는 것이 아니다 단지 객체를 가리키는 변수가 바뀌는 것이다.
     }
 }
