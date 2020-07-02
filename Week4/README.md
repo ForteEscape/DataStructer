@@ -1,6 +1,6 @@
 # Week4 클래스, 객체, 참조변수
 
-* Week4 에서는 Class, Method, Member(Field), Object 등의 개념을 학습합니다.
+* Week4 에서는 Class, Object, reference Value 의 개념을 학습합니다.
 
 ## Class
 * 클래스는 하나의 type 이다 (int, double etc... 처럼)
