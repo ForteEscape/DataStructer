@@ -44,6 +44,7 @@ public class Main{
 * Class 안에 Class와 동일한 이름을 가지며 return type이 없는 특별한 메서드를 둘 수 있다.
   이것을 생성자(Constructor) 라고 한다.
 * Constructor는 new 명령으로 객체가 생성될 때 자동으로 실행된다. 주 목적은 객체의 field 값을 초기화시키는 것이다.
+* 하나의 class 안에 다수의 constructor가 들어갈 수 있다.
 
 <pre>
 <code>
