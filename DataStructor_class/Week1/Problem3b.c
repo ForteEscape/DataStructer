@@ -5,6 +5,8 @@
 void sorting(int n, int* data);
 void swap(int* num1, int* num2);
 
+// 배열을 사용했을때 코드
+
 int main() {
 	int number;
 	int data[MAX];
