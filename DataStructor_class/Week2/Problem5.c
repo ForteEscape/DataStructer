@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #pragma warning(disable : 4996);
 
-typedef struct _RESULT{ // ans struct
+struct _RESULT{ // ans struct
     int ans_count = 0;
     char words[100];
 };
@@ -16,12 +16,14 @@ int main()
 {
     FILE* fp = fopen("pride_and_prejudice.txt", "r");
     char buffer[100];
-    char* str[100000];
-    int idx = 0;
+    char* str[10000];
+    char* target_arr[10000];
     int diff_flag = 1;
-    int temp;
+    int idx = 0;
+    int res_idx = 0;
+    int count = 0;
 
-    struct _RESULT result[100];
+    struct _RESULT result[1000];
 
     while (fgets(buffer, 100, fp)) {
         if (strcmp(buffer, "\n") == 0) {
@@ -52,7 +54,34 @@ int main()
     bubbleSort(str, idx);
     
     for (int i = 0; i < idx; i++) {
-        printf("%s\n", str[i]);
+        if (strlen(str[i]) >= 7) {
+            for (int j = 0; j < i; j++) {
+                if (strcmp(str[i], str[j]) == 0) {
+                    diff_flag = 0;
+                    break;
+                }
+                diff_flag = 1;
+            }
+            if (diff_flag == 0) {
+                continue;
+            }
+
+            strcpy(result[res_idx].words, str[i]);
+
+            for (int j = i; j < idx; j++) {
+                if (strcmp(str[i], str[j]) == 0) {
+                    count++;
+                }
+            }
+            result[res_idx].ans_count = count;
+            res_idx++;
+        }
+        count = 0;
+        diff_flag = 1;
+    }
+
+    for (int i = 0; i < res_idx; i += 10) {
+        printf("%s %d\n", result[i].words, result[i].ans_count);
     }
 
     for (int i = 0; i < idx; i++) {
