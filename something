@@ -1,0 +1,18 @@
+void remove(struct node* head){
+    struct node* p = head;
+    struct node* q = NULL;
+
+    while(p != NULL && p->data % 3 != 0){
+        q = p;
+        p = p->next;
+    }
+
+    if(q == NULL){ //empty list
+        return;
+    }
+    else if(p == NULL){ // p->data % 3 == 0 is not exsist
+        return;
+    }
+
+    q->next = p->next;
+}
