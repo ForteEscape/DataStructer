@@ -4,7 +4,7 @@
 #pragma warning(disable : 4996)
 
 typedef struct _RESULT { // ans struct
-    int ans_count = 0;
+    int ans_count;
     char words[100];
 }_RESULT;
 
