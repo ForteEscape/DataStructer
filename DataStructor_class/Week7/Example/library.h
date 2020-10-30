@@ -9,7 +9,7 @@ typedef struct snode SNode;
 typedef struct artist Artist;
 
 struct song {
-	struct Artist* artist;
+    Artist* artist;
 	char* title;
 	char* name;
 	int index;
@@ -29,7 +29,9 @@ struct artist {
 	SNode* tail;
 };
 
+void initialize();
 void add_song(char* artist, char* title, char* path);
+Song* create_song_instance(Artist* ptr_artist, char* title, char* path)
 
 #endif // !LIBRARY_H
 
